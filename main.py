@@ -71,19 +71,6 @@ def back_to_main_menu(update: Update, context: CallbackContext):
     reply_markup = InlineKeyboardMarkup(keyboard)
     update.callback_query.message.reply_text("Welcome back to the main menu!", reply_markup=reply_markup)
 
-# Scheduler for Good Morning and Good Night messages
-def send_good_morning(context: CallbackContext):
-    context.bot.send_message(chat_id=config.GROUP_LINK, text="Good Morning! 🌞 Have a great day ahead!")
-
-def send_good_night(context: CallbackContext):
-    context.bot.send_message(chat_id=config.GROUP_LINK, text="Good Night! 🌙 Sleep tight!")
-
-# Setup scheduler for periodic messages
-def setup_scheduler():
-    scheduler = BackgroundScheduler()
-    scheduler.add_job(send_good_morning, 'cron', hour=12, minute=0)
-    scheduler.add_job(send_good_night, 'cron', hour=22, minute=0)
-    scheduler.start()
 
 # Main function to start the bot
 def main():
