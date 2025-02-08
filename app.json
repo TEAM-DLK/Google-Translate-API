@@ -1,11 +1,31 @@
 {
-  "name": "Telegram Google Translate Bot",
-  "description": "A Telegram bot that translates text using Google Translate and allows users to upload ZIP files.",
-  "repository": "https://github.com/yourusername/your-repository",
+  "name": "Telegram-Translate-Bot",
+  "description": "A Telegram bot that translates text using Google Translate API",
+  "repository": "https://github.com/yourusername/your-repo-name",
+  "logo": "https://your-image-url.com/logo.png",
+  "keywords": ["telegram", "bot", "translate", "google-translate"],
   "env": {
     "TELEGRAM_BOT_TOKEN": {
-      "description": "Your Telegram Bot API token",
+      "description": "Your Telegram Bot Token",
       "required": true
+    },
+    "OWNER_ID": {
+      "description": "Your Telegram ID",
+      "required": true
+    },
+    "GROUP_LINK": {
+      "description": "Link to your Telegram group",
+      "required": true
+    },
+    "CHANNEL_LINK": {
+      "description": "Link to your Telegram channel",
+      "required": true
+    }
+  },
+  "formation": {
+    "worker": {
+      "command": "python main.py",
+      "quantity": 1
     }
   },
   "buildpacks": [
@@ -13,7 +33,5 @@
       "url": "heroku/python"
     }
   ],
-  "scripts": {
-    "postdeploy": "echo 'Deployment completed!'"
-  }
+  "addons": []
 }
