@@ -1,0 +1,19 @@
+{
+  "name": "Telegram Google Translate Bot",
+  "description": "A Telegram bot that translates text using Google Translate and allows users to upload ZIP files.",
+  "repository": "https://github.com/yourusername/your-repository",
+  "env": {
+    "TELEGRAM_BOT_TOKEN": {
+      "description": "Your Telegram Bot API token",
+      "required": true
+    }
+  },
+  "buildpacks": [
+    {
+      "url": "heroku/python"
+    }
+  ],
+  "scripts": {
+    "postdeploy": "echo 'Deployment completed!'"
+  }
+}
