@@ -3,14 +3,7 @@ import logging
 from telegram import Update, InlineKeyboardButton, InlineKeyboardMarkup
 from telegram.ext import Updater, CommandHandler, CallbackQueryHandler, MessageHandler, Filters, CallbackContext
 from deep_translator import GoogleTranslator
-from dotenv import load_dotenv
-
-# Load environment variables
-load_dotenv()
-TOKEN = os.getenv("TELEGRAM_BOT_TOKEN")
-OWNER_ID = os.getenv("OWNER_ID")  # Your Telegram ID
-GROUP_LINK = os.getenv("GROUP_LINK")  # Telegram group link
-CHANNEL_LINK = os.getenv("CHANNEL_LINK")  # Telegram channel link
+import config  # Import config.py
 
 # Setup logging
 logging.basicConfig(level=logging.INFO)
@@ -34,9 +27,9 @@ LANGUAGES = {
 def start(update: Update, context: CallbackContext):
     keyboard = [
         [InlineKeyboardButton("🌍 Select Language", callback_data="select_lang")],
-        [InlineKeyboardButton("📢 Channel", url=CHANNEL_LINK)],
-        [InlineKeyboardButton("💬 Group", url=GROUP_LINK)],
-        [InlineKeyboardButton("👤 Owner", url=f"tg://user?id={OWNER_ID}")],
+        [InlineKeyboardButton("📢 Channel", url=config.CHANNEL_LINK)],
+        [InlineKeyboardButton("💬 Group", url=config.GROUP_LINK)],
+        [InlineKeyboardButton("👤 Owner", url=f"tg://user?id={config.OWNER_ID}")],
     ]
     reply_markup = InlineKeyboardMarkup(keyboard)
     update.message.reply_text("Welcome to the Google Translate Bot! 🌍\nSelect a language below:", reply_markup=reply_markup)
@@ -68,7 +61,7 @@ def language_selected(update: Update, context: CallbackContext):
 
 # Main function to start the bot
 def main():
-    updater = Updater(TOKEN, use_context=True)
+    updater = Updater(config.TELEGRAM_BOT_TOKEN, use_context=True)
     dp = updater.dispatcher
 
     dp.add_handler(CommandHandler("start", start))
