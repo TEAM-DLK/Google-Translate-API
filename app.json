@@ -1,37 +1,36 @@
 {
-  "name": "Telegram-Translate-Bot",
-  "description": "A Telegram bot that translates text using Google Translate API",
-  "repository": "https://github.com/yourusername/your-repo-name",
-  "logo": "https://your-image-url.com/logo.png",
-  "keywords": ["telegram", "bot", "translate", "google-translate"],
+  "name": "Telegram Bot with DeepAI Integration",
+  "description": "A Telegram bot that translates text and generates images using DeepAI.",
+  "repository": "https://github.com/your-username/telegram-deepai-bot",
+  "keywords": ["python", "telegram", "bot", "deepai", "image generation"],
   "env": {
     "TELEGRAM_BOT_TOKEN": {
-      "description": "Your Telegram Bot Token",
+      "description": "The token for your Telegram bot",
       "required": true
     },
     "OWNER_ID": {
-      "description": "Your Telegram ID",
-      "required": true
-    },
-    "GROUP_LINK": {
-      "description": "Link to your Telegram group",
+      "description": "Telegram user ID for the bot owner",
       "required": true
     },
     "CHANNEL_LINK": {
-      "description": "Link to your Telegram channel",
+      "description": "URL of the Telegram channel",
+      "required": true
+    },
+    "GROUP_LINK": {
+      "description": "URL of the Telegram group",
+      "required": true
+    },
+    "DEEP_AI_API_KEY": {
+      "description": "API key for DeepAI",
       "required": true
     }
   },
   "formation": {
     "worker": {
-      "command": "python main.py",
       "quantity": 1
     }
   },
-  "buildpacks": [
-    {
-      "url": "heroku/python"
-    }
-  ],
-  "addons": []
+  "scripts": {
+    "postdeploy": "echo 'Deployment Successful!'"
+  }
 }
