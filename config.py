@@ -3,8 +3,8 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-# Bot configuration
-TELEGRAM_BOT_TOKEN = os.getenv('TELEGRAM_BOT_TOKEN')
-OWNER_ID = os.getenv('OWNER_ID')
-CHANNEL_LINK = os.getenv('CHANNEL_LINK')
-GROUP_LINK = os.getenv('GROUP_LINK')
+TELEGRAM_BOT_TOKEN = os.environ.get('TELEGRAM_BOT_TOKEN', '')
+OWNER_ID = os.environ.get('OWNER_ID', '')
+CHANNEL_LINK = os.environ.get('CHANNEL_LINK', 'https://t.me/your_channel')
+GROUP_LINK = os.environ.get('GROUP_LINK', 'https://t.me/your_group')
+REPO_LINK = os.environ.get('REPO_LINK', 'https://github.com/your_repo')
