@@ -66,12 +66,12 @@ def start(update: Update, context: CallbackContext):
 
     keyboard = [
         [
-            InlineKeyboardButton("🌟 Popular Languages", callback_data="popular_lang"),
+            InlineKeyboardButton("🌟 Popular", callback_data="popular_lang"),
             InlineKeyboardButton("🌐 All Languages", callback_data="all_lang_0")
         ],
         [
-            InlineKeyboardButton("📢 Updates Channel", url=CONFIG["CHANNEL_LINK"]),
-            InlineKeyboardButton("💬 Support Group", url=CONFIG["GROUP_LINK"]),
+            InlineKeyboardButton("📢 Updates", url=CONFIG["CHANNEL_LINK"]),
+            InlineKeyboardButton("💬 Support", url=CONFIG["GROUP_LINK"]),
         ],
         [
             InlineKeyboardButton("👨💻 Developer", url=f"tg://user?id={CONFIG['OWNER_ID']}"),
