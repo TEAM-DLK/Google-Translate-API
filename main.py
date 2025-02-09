@@ -4,7 +4,6 @@ import requests
 from telegram import Update, InlineKeyboardButton, InlineKeyboardMarkup
 from telegram.ext import Updater, CommandHandler, CallbackQueryHandler, MessageHandler, Filters, CallbackContext
 from deep_translator import GoogleTranslator
-from apscheduler.schedulers.background import BackgroundScheduler
 from dotenv import load_dotenv
 import config
 
@@ -82,8 +81,6 @@ def main():
     dp.add_handler(CallbackQueryHandler(back_to_main_menu, pattern="^back_to_main_menu$"))
     dp.add_handler(MessageHandler(Filters.text & ~Filters.command, handle_image_description))  # Handle image description
 
-    # Start scheduler
-    setup_scheduler()
 
     updater.start_polling()
     updater.idle()
