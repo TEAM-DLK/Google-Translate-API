@@ -31,7 +31,9 @@ def start(update: Update, context: CallbackContext):
          InlineKeyboardButton("📢 Channel", url=config.CHANNEL_LINK),
          InlineKeyboardButton("💬 Group", url=config.GROUP_LINK),
         ],
-        [InlineKeyboardButton("👤 Owner", url=f"tg://user?id={config.OWNER_ID}")],
+        [InlineKeyboardButton("👤 Owner", url=f"tg://user?id={config.OWNER_ID}"),
+         InlineKeyboardButton("📁 Repository", url=f"https://github.com/TEAM-DLK/Google-Translate-API"),
+        ],
     ]
     reply_markup = InlineKeyboardMarkup(keyboard)
     update.message.reply_text("Welcome to the Google Translate Bot! 🌍\nSelect a language below:", reply_markup=reply_markup)
