@@ -1,4 +1,4 @@
-```markdown
+
 # 🌍 PolyGlot Bot - Telegram Translation Assistant
 
 [![Python](https://img.shields.io/badge/Python-3.10%2B-blue.svg)](https://python.org)
@@ -8,7 +8,7 @@
 A smart Telegram bot powered by Google Translate API that provides real-time translations in 100+ languages. Supports inline mentions, language detection, and user-friendly interfaces.
 
 ![Bot Demo](https://via.placeholder.com/800x400.png?text=https://t.me/DLKGTBOT)
-
+```markdown
 ## ✨ Features
 
 - **100+ Languages**: Support for major languages and rare dialects
