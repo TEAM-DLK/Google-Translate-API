@@ -59,9 +59,7 @@ def start(update: Update, context: CallbackContext):
         "🚀 <b>How to use:</b>\n"
         "1. Choose target language below\n"
         "2. Send any text message\n"
-        "3. Get instant translation!\n\n"
-        "📚 <b>Popular Languages:</b>\n"
-        "English, Spanish, French, German, Russian, Chinese, Japanese, Arabic, Hindi"
+        "3. Get instant translation!"
     )
 
     keyboard = [
