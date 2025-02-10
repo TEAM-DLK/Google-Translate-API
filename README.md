@@ -7,7 +7,7 @@
 
 A smart Telegram bot powered by Google Translate API that provides real-time translations in 100+ languages. Supports inline mentions, language detection, and user-friendly interfaces.
 
-![Bot Demo](https://t.me/DLKGTBOT)
+
 
 ```markdown
 ## ✨ Features
