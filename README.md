@@ -3,16 +3,15 @@
 
 [![Python](https://img.shields.io/badge/Python-3.10%2B-blue.svg)](https://python.org)
 [![License](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/yourusername/your-repo)
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/TEAM-DLK/Google-Translate-API)
 
 A smart Telegram bot powered by Google Translate API that provides real-time translations in 100+ languages. Supports inline mentions, language detection, and user-friendly interfaces.
 
-![Bot Demo](https://via.placeholder.com/800x400.png?text=Translation+Bot+Demo)
+![Bot Demo](https://via.placeholder.com/800x400.png?text=https://t.me/DLKGTBOT)
 
 ## ✨ Features
 
 - **100+ Languages**: Support for major languages and rare dialects
-- **Mention Translation**: `@YourBotName Hello world` in groups/channels
 - **Auto-Detection**: Automatic source language recognition
 - **User Sessions**: Remembers selected target language
 - **Pagination**: Easy navigation through language lists
@@ -30,8 +29,8 @@ A smart Telegram bot powered by Google Translate API that provides real-time tra
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/yourusername/translation-bot.git
-cd translation-bot
+git clone https://github.com/TEAM-DLK/Google-Translate-API.git
+cd Google-Translate-API
 ```
 
 2. Install dependencies:
@@ -56,7 +55,7 @@ python main.py
 |---------|-------------|
 | `/start` | Show main menu with language options |
 | `/about` | Display bot information and version |
-| `@botname <text>` | Translate mentioned text in groups |
+
 
 ## 🛠 Configuration
 
@@ -101,13 +100,9 @@ heroku logs --tail
    Bot: 🌐 Translation (ES): Hola mundo!
    ```
 
-2. **Group Mention**:
-   ```
-   User: @TranslateBot Good morning everyone
-   Bot: 🌐 Translation (FR): Bonjour à tous
-   ```
 
-3. **Language Selection**:
+
+2. **Language Selection**:
    ```
    User: /start
    Bot: Shows language selection keyboard
@@ -129,16 +124,6 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 ## 📞 Contact
 
-Developer: [@YourTelegram](https://t.me/YourTelegram)  
-Project Link: [GitHub Repository](https://github.com/yourusername/translation-bot)
+Developer: [@達南佳亞](https://t.me/iiiIiiiAiiiMiii)  
+Project Link: [GitHub Repository](https://github.com/TEAM-DLK/Google-Translate-API)
 ```
-
-Key sections included:
-1. Badges for quick project status overview
-2. Visual demo placeholder (replace with actual screenshots)
-3. Clear installation and deployment instructions
-4. Command reference table
-5. Configuration details
-6. Usage examples
-7. Contribution guidelines
-8. License and contact information
