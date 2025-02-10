@@ -63,7 +63,7 @@ def start(update: Update, context: CallbackContext):
     )
 
     keyboard = [
-        [   InlineKeyboardButton("Add Me", url=f"http://t.me/DLKGTBOT?startgroup=new")
+        [   InlineKeyboardButton("Add To Group", url=f"http://t.me/DLKGTBOT?startgroup=new")
         ],
         [
             InlineKeyboardButton("🌟 Popular", callback_data="popular_lang"),
