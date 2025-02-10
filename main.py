@@ -63,6 +63,8 @@ def start(update: Update, context: CallbackContext):
     )
 
     keyboard = [
+        [   InlineKeyboardButton("Add Me", url=f"http://t.me/DLKGTBOT?startgroup=new")
+        ],
         [
             InlineKeyboardButton("🌟 Popular", callback_data="popular_lang"),
             InlineKeyboardButton("🌐 All Languages", callback_data="all_lang_0")
